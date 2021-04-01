@@ -2,12 +2,13 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
+    "strict": true,
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
@@ -15,9 +16,19 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@environments/*":      ["environments/*"],
+      "@auth/*":              ["app/auth/*"],
+      "@common/*":            ["app/common/*"],
+      "@common/services/*":   ["app/common/services/*"],
+      "@common/services":     ["app/common/services"],
+      "@common/interceptors": ["app/common/interceptors"],
+      "@common/models":       ["app/common/models"],
+    }
   },
   "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false
+    "enableI18nLegacyMessageIdFormat": false,
+    "strict": true
   }
 }
