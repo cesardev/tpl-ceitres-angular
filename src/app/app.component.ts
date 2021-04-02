@@ -7,11 +7,9 @@ import { Theme } from '@common/models';
   selector: 'app-root',
   template: `
     <section *ngIf="configLoaded">
-      <p class="bg-primary-color">App components it's work!</p>
-      <p class="bg-primary-color-300">a 300</p>
-      <button class="btn bg-red-500" (click)="changeColorTheme()">
-        Cambiar color primario
-      </button>
+      <ng-container>
+        <router-outlet></router-outlet>
+      </ng-container>
     </section>
   `,
   styles: [],

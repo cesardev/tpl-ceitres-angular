@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HammerModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { GlobalSettings } from '@common/global.settings';
 import { CommonServiceModule } from '@common/services/common-service.module';
 import en from '@angular/common/locales/en';
+import { AppRouting } from './app.routing';
 
 registerLocaleData( en );
 
@@ -22,10 +22,11 @@ registerLocaleData( en );
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule,
+    HammerModule,
     BrowserAnimationsModule,
     NzButtonModule,
-    CommonServiceModule
+    CommonServiceModule,
+    AppRouting
   ],
   providers: [
     GlobalSettings,
