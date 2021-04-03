@@ -1,0 +1,25 @@
+{
+   "success": true,
+   "status": 200,
+   "message": "Get preferences successfully ",
+   "data": {
+      "version": "0.0.1",
+      "loggedInUser": null,
+      "preferences": {
+         "fixedHeader": true,
+         "fixedFooter": false,
+         "fixedSidebar": true,
+         "sidebarOptions": {
+            "type": "default",
+            "position": "vertical",
+            "show": true
+         },
+         "pixelBase": 14,
+         "theme": {
+            "primary-color": "#00838f",
+            "secondary-color": "#37474f",
+            "accent-color": "#ffd740"
+         }
+      }
+   }
+}

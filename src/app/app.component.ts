@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ThemeService } from '@common/services';
+import { AppService } from '@common/services';
 import { GlobalSettings } from '@common/global.settings';
-import { Theme } from '@common/models';
+import { BackendResponse } from '@common/models';
 
 @Component({
   selector: 'app-root',
@@ -16,38 +16,28 @@ import { Theme } from '@common/models';
 })
 export class AppComponent implements OnInit {
 
-  public configLoaded: boolean = false;
+  public configLoaded!: boolean;
 
   constructor(
     public global: GlobalSettings,
-    private readonly themeService: ThemeService
+    private readonly appService: AppService
   ) { }
 
   ngOnInit(): void {
 
-    this.setTheme();
+    this.manageAppData();
 
   }
 
-  public setTheme(): void {
+  private manageAppData(): void {
 
-    const theme = new Theme(
-      this.global.preferences.theme['primary-color'],
-      this.global.preferences.theme['secondary-color'],
-      this.global.preferences.theme['accent-color'],
+    this.appService.manageAppData().subscribe(
+      ( response: BackendResponse ) => {
+        if ( response.success ) {
+          this.configLoaded = true;
+        }
+      }
     );
-
-    this.configLoaded = this.themeService.setTheme( theme );
-
-  }
-
-  public changeColorTheme(): void {
-
-    const theme = new Theme(
-      '#303f9f', '#00695c', '#90caf9'
-    );
-
-    this.themeService.setTheme( theme );
 
   }
 

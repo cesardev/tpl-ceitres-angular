@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { ThemeService } from '@common/services';
+import { ThemeService, AppService } from '@common/services';
 import { ErrorInterceptor, RequestInterceptor } from '@common/interceptors';
-
-
 
 @NgModule({
   imports: [
@@ -13,6 +11,7 @@ import { ErrorInterceptor, RequestInterceptor } from '@common/interceptors';
   ],
   providers: [
     ThemeService,
+    AppService,
     ErrorInterceptor,
     RequestInterceptor,
     {

@@ -8,7 +8,9 @@ export class RequestInterceptor implements HttpInterceptor {
    constructor() { }
 
    intercept( req: HttpRequest<any>, next: HttpHandler ): Observable<HttpEvent<any>> {
-      throw new Error("Method not implemented.");
+      // throw new Error("Method not implemented.");
+      console.log( req );
+      return next.handle( req );
    }
 
 }

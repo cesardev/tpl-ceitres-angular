@@ -1,1 +1,22 @@
 <p>login works!</p>
+<ng-container *ngFor="let color of lstColors">
+   <article *ngFor="let variant of color.variants"
+      [class]="'bg-' + color.name + '-' + variant">
+      <p>{{ color.name | uppercase }} => {{ variant }}</p>
+   </article>
+</ng-container>
+
+<br><br>
+
+<button (click)="changeTheme( 1 )">
+   Cambiar tema 1
+</button>
+<button (click)="changeTheme( 2 )">
+   Cambiar tema 2
+</button>
+<button (click)="changeTheme( 3 )">
+   Cambiar tema 3
+</button>
+<button (click)="changeTheme( 0 )">
+   Reestablecer
+</button>

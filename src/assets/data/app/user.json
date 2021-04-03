@@ -1,0 +1,34 @@
+{
+   "success": true,
+   "status": 200,
+   "message": "Logged in user successfully ",
+   "data": {
+      "firstName": "",
+      "secondName": "",
+      "surName": "",
+      "lastName": "",
+      "fullName": "",
+      "username": "",
+      "profile": {
+         "name": "",
+         "code": 0
+      },
+      "token": "",
+      "preferences": {
+         "fixedHeader": true,
+         "fixedFooter": false,
+         "fixedSidebar": true,
+         "sidebarOptions": {
+            "type": "default",
+            "position": "vertical",
+            "show": true
+         },
+         "pixelBase": 14,
+         "theme": {
+            "primary-color": "#00838f",
+            "secondary-color": "#37474f",
+            "accent-color": "#ffd740"
+         }
+      }
+   }
+}
