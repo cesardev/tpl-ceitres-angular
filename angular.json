@@ -7,8 +7,8 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "sass",
-          "styleext": "sass",
+          "style": "scss",
+          "styleext": "scss",
           "inlineStyle": false
         }
       },
@@ -46,7 +46,7 @@
             ],
             "styles": [
               "src/theme.less",
-              "src/styles.sass"
+              "src/styles.scss"
             ],
             "scripts": []
           },

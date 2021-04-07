@@ -15,6 +15,11 @@ import { AppRouting } from './app.routing';
 
 registerLocaleData( en );
 
+/**
+ * @author Ceitres company by César Gómez
+ * @description
+ *  Main application module
+ */
 @NgModule({
   declarations: [
     AppComponent

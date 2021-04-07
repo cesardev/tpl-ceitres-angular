@@ -20,6 +20,7 @@ export class AppService {
   ) { }
 
   /**
+   * @author Ceitres company by César Gómez
    * @description
    *  Servicio para obtener y asignar la personalización de la aplicación a las variables
    *  globales que corresponden a cada dato

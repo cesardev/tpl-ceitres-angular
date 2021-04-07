@@ -29,11 +29,22 @@ export class AppComponent implements OnInit {
 
   }
 
+  /**
+   * @author Ceitres company by César Gómez
+   * @description
+   *  Method that is responsible for consuming the global configuration
+   *  of the application and set the theme
+   * @return void
+   */
   private manageAppData(): void {
 
     this.appService.manageAppData().subscribe(
       ( response: BackendResponse ) => {
         if ( response.success ) {
+          /**
+           * If the configuration is successful,
+           * load all content of the application
+           */
           this.configLoaded = true;
         }
       }

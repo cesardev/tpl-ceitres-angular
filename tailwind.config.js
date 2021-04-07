@@ -30,6 +30,7 @@ module.exports = {
       colors: {
         'primary-color': {
           DEFAULT: 'var(--primary-color-500)',
+          10: 'var(--primary-color-10)',
           50: 'var(--primary-color-50)',
           100: 'var(--primary-color-100)',
           200: 'var(--primary-color-200)',
@@ -43,6 +44,7 @@ module.exports = {
         },
         'secondary-color': {
           DEFAULT: 'var(--secondary-color-500)',
+          10: 'var(--secondary-color-10)',
           50: 'var(--secondary-color-50)',
           100: 'var(--secondary-color-100)',
           200: 'var(--secondary-color-200)',
@@ -56,6 +58,7 @@ module.exports = {
         },
         'accent-color': {
           DEFAULT: 'var(--accent-color-500)',
+          10: 'var(--accent-color-10)',
           50: 'var(--accent-color-50)',
           100: 'var(--accent-color-100)',
           200: 'var(--accent-color-200)',
@@ -966,4 +969,7 @@ module.exports = {
     zIndex: ["responsive", "focus-within", "focus"],
   },
   plugins: [],
+  // corePlugins: {
+  //   fontFamily: false,
+  // }
 };

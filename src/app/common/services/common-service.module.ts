@@ -4,6 +4,12 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ThemeService, AppService } from '@common/services';
 import { ErrorInterceptor, RequestInterceptor } from '@common/interceptors';
 
+/**
+ * @author Ceitres company by César Gómez
+ * @description
+ *  Module that contains the resources for common services
+ *  of the application
+ */
 @NgModule({
   imports: [
     CommonModule,

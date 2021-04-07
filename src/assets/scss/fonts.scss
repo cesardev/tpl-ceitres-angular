@@ -1,0 +1,51 @@
+$nunito-path: '/assets/fonts/nunito';
+$baloo-path: '/assets/fonts/baloo-tamma-2';
+$sniglet-path: '/assets/fonts/sniglet';
+
+// NUNITO FACE
+@font-face {
+   font-family: 'Nunito-light';
+   src: url('#{$nunito-path}/Nunito-Light.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Nunito-regular';
+   src: url('#{$nunito-path}/Nunito-Regular.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Nunito-semibold';
+   src: url('#{$nunito-path}/Nunito-Bold.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Nunito-bold';
+   src: url('#{$nunito-path}/Nunito-SemiBold.ttf') format('truetype');
+}
+
+// BALOO TAMMA 2
+@font-face {
+   font-family: 'BalooTamma2-regular';
+   src: url('#{$baloo-path}/BalooTamma2-Regular.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'BalooTamma2-semibold';
+   src: url('#{$baloo-path}/BalooTamma2-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'BalooTamma2-bold';
+   src: url('#{$baloo-path}/BalooTamma2-Bold.ttf') format('truetype');
+}
+
+// SNIGLET
+@font-face {
+   font-family: 'Sniglet-regular';
+   src: url('#{$sniglet-path}/Sniglet-Regular.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Sniglet-extrabold';
+   src: url('#{$sniglet-path}/Sniglet-ExtraBold.ttf') format('truetype');
+}

@@ -1,0 +1,45 @@
+//* ------------ BUTTONS ------------ *//
+$primary-button:     'bg-primary-color text-primary-color-10';
+$secondary-button:   'bg-secondary-color text-secondary-color-10';
+$accent-button:      'bg-accent-color text-accent-color-800';
+$green-button:       'bg-green-500 text-green-100';
+$red-button:         'bg-red-500 text-red-100';
+$yellow-button:      'bg-yellow-500 text-yellow-100';
+
+.btn {
+   outline: none;
+   border: none;
+   padding: 0.3rem 1rem;
+   font-family: $text-font-sb;
+   @apply rounded;
+
+   &:focus {
+      border: none;
+      outline: none;
+   }
+
+   &-primary   { @apply #{$primary-button}; }
+   &-secondary { @apply #{$secondary-button}; }
+   &-accent    { @apply #{$accent-button}; }
+   &-green     { @apply #{$green-button}; }
+   &-red       { @apply #{$red-button}; }
+   &-yellow    { @apply #{$yellow-button}; }
+
+}
+
+//* ------------ FONTS ------------ *//
+$lst-fonts: (
+   0: ( class: "text-font", code: "Nunito-regular" ),
+   1: ( class: "text-font-lt", code: "Nunito-light" ),
+   2: ( class: "text-font-sb", code: "Nunito-semibold" ),
+   3: ( class: "text-font-bd", code: "Nunito-bold" ),
+   4: ( class: "title-font", code: "BalooTamma2-regular" ),
+   5: ( class: "title-font-sb", code: "BalooTamma2-semibold" ),
+   6: ( class: "title-font-bd", code: "BalooTamma2-bold" ),
+   7: ( class: "accent-font", code: "Sniglet-regular" ),
+   8: ( class: "accent-font-eb", code: "Sniglet-extrabold" )
+);
+
+@each $label, $map in $lst-fonts {
+   .#{map-get($map, class)} { font-family: #{map-get($map, code)}; }
+}
