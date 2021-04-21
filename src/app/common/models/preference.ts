@@ -8,6 +8,7 @@ export interface Preference {
    fixedSidebar: boolean;
    sidebarOptions: SidebarOption;
    pixelBase: number;
+   interfaceMode: string;
    theme: Theme;
 
 }

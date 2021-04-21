@@ -10,7 +10,7 @@ module.exports = {
     content: ["./src/**/*.html", "./src/**/*.scss", "./src/**/*.sass", "./src/**/*.ts"],
   },
   presets: [],
-  darkMode: 'media', // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     colors: {
       transparent: "transparent",

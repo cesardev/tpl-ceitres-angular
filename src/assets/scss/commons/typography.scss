@@ -1,0 +1,36 @@
+//* ------------ TYPOGRAPHY ------------ *//
+
+$lst-fonts: (
+   0: ( class: "text-font", code: $text-font ),
+   1: ( class: "text-font-lt", code: $text-font-lt ),
+   2: ( class: "text-font-sb", code: $text-font-sb ),
+   3: ( class: "text-font-bd", code: $text-font-bd ),
+   4: ( class: "title-font", code: $title-font ),
+   5: ( class: "title-font-sb", code: $title-font-sb ),
+   6: ( class: "title-font-bd", code: $title-font-bd ),
+   7: ( class: "accent-font", code: $accent-font ),
+   8: ( class: "accent-font-eb", code: $accent-font-eb )
+);
+
+$lst-sizes: (
+   0: ( class: "font-size-text", code: $font-size-text ),
+   1: ( class: "font-size-text-xs", code: $font-size-text-xs ),
+   2: ( class: "font-size-text-sm", code: $font-size-text-sm ),
+   3: ( class: "font-size-text-lg", code: $font-size-text-lg ),
+   4: ( class: "font-size-title", code: $font-size-title ),
+   5: ( class: "font-size-title-xs", code: $font-size-title-xs ),
+   6: ( class: "font-size-title-sm", code: $font-size-title-sm ),
+   7: ( class: "font-size-title-lg", code: $font-size-title-lg )
+);
+
+@each $label, $map in $lst-fonts {
+   .#{map-get($map, class)} {
+      font-family: #{map-get($map, code)} !important;
+   }
+}
+
+@each $label, $map in $lst-sizes {
+   .#{map-get($map, class)} {
+      font-size: #{map-get($map, code)} !important;
+   }
+}

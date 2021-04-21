@@ -1,0 +1,13 @@
+& {
+
+   @if $mode-style == 'dark' {
+      background-color: darken($mode-background-color, 5%);
+   } @else {
+      background-color: darken($mode-background-color, 10%);
+   }
+
+   color: $mode-text-color;
+}
+
+@import './ngzorro';
+@import './commons';

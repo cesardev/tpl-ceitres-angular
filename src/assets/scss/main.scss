@@ -1,0 +1,15 @@
+.application {
+
+   &.light {
+      @import './modes/light';
+      @import './sanitizertags';
+      @import './wrapper';
+   }
+
+   &.dark {
+      @import './modes/dark';
+      @import './sanitizertags';
+      @import './wrapper';
+   }
+
+}

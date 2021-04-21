@@ -1,21 +1,120 @@
-<p>login works!</p>
-<div class="flex justify-around">
-   <button class="btn btn-primary">
-      Primary button
-   </button>
-   <button class="btn btn-secondary">
-      Secondary button
-   </button>
-   <button class="btn btn-accent">
-      Accent button
-   </button>
-   <button class="btn btn-green">
-      Green button
-   </button>
-   <button class="btn btn-red">
-      Red button
-   </button>
-   <button class="btn btn-yellow">
-      Yellow button
-   </button>
-</div>
+<section class="login">
+   <!-- COVER PAGE -->
+   <article class="coverpage">
+      <!-- COVER PAGE BACKGROUND -->
+      <div class="coverpage__background"></div>
+      <!-- COVER PAGE WAVES -->
+      <div class="coverpage__wave">
+         <!-- WAVE TOP -->
+         <div class="coverpage__wave-top">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" class="svg-wave">
+               <path d="M-0.34,149.10 C75.28,-17.24 319.63,185.52 504.17,90.04 L500.00,0.00 L-0.00,0.00 Z"></path>
+            </svg>
+         </div>
+         <!-- WAVE BOTTOM -->
+         <div class="coverpage__wave-bottom">
+            <!-- Accent -->
+            <div>
+               <svg viewBox="0 0 500 150" preserveAspectRatio="none" class="svg-wave svg-wave--accent">
+                  <path d="M-2.04,19.18 C203.38,-55.62 264.90,162.88 499.10,124.50 L500.00,149.60 L-0.00,149.60 Z"></path>
+               </svg>
+            </div>
+            <!-- Primary -->
+            <div>
+               <svg viewBox="0 0 500 150" preserveAspectRatio="none" class="svg-wave svg-wave--primary">
+                  <path d="M-4.30,123.50 C216.93,145.16 176.30,-2.48 501.35,-1.48 L500.00,149.60 L-0.00,149.60 Z"></path>
+               </svg>
+            </div>
+            <!-- Transparent -->
+            <div>
+               <svg viewBox="0 0 500 150" preserveAspectRatio="none" class="svg-wave svg-wave--transparent">
+                  <path d="M0.22,107.76 C273.36,-114.68 363.66,80.20 501.35,82.18 L500.00,149.60 L-0.00,149.60 Z"></path>
+               </svg>
+            </div>
+         </div>
+      </div>
+      <!-- COVER PAGE CONTENT -->
+      <div class="coverpage__content">
+         <!-- Logo -->
+         <div class="coverpage__content-logo">
+            <img class="w-28 mb-3" [src]="assets + '/img/app/hojas.png'" alt="Logotipo del aplicativo" />
+            <h1 class="title-font-bd text-4xl text-gray-800">
+               Ceitres
+            </h1>
+         </div>
+         <!-- Register -->
+         <div class="coverpage__content-link mt-5">
+            <span class="text-gray-800">
+               Don't have an account? 
+               <a routerLink="/auth/register">Sign up</a>
+            </span>
+         </div>
+      </div>
+   </article>
+   <!-- FORM -->
+   <form class="form bg-mode" [formGroup]="loginFormGroup">
+      <div class="form__title">
+         <h2 class="title-font-bd font-size-title-lg color-mode">
+            Login
+         </h2>
+         <hr class="form__title-border" />
+      </div>
+      <div class="form__content">
+         <strong class="title-font font-size-text-lg block my-4">
+            Welcome back, please login to your account
+         </strong>
+         <!-- Username -->
+         <nz-form-item>
+            <nz-form-control nzErrorTip="Please input your username!">
+               <nz-input-group nzPrefixIcon="user">
+                  <input formControlName="userName" nz-input placeholder="Username" />
+               </nz-input-group>
+            </nz-form-control>
+         </nz-form-item>
+         <!-- Password -->
+         <nz-form-item>
+            <nz-form-control nzErrorTip="Please input your Password!">
+               <nz-input-group nzPrefixIcon="lock">
+                  <input formControlName="password" nz-input type="password" placeholder="Password" />
+               </nz-input-group>
+            </nz-form-control>
+         </nz-form-item>
+         <!-- Remember me | forgot password -->
+         <div class="form__content-props">
+            <label nz-checkbox [(ngModel)]="flgRemember" class="color-mode">
+               Remember me
+            </label>
+            <a routerLink="/auth/password-recovery">
+               Forgot password?
+            </a>
+         </div>
+         <button type="button" class="btn btn-primary w-full"
+            [disabled]="!loginFormGroup.valid"
+            (click)="changeTheme()">
+            Login
+         </button>
+      </div>
+      <fieldset class="form__otherslogin">
+         <legend align="center">
+            Or continue with
+         </legend>
+         <div class="form__otherslogin-btn">
+            <button class="btn btn-primary-outline w-24 flex justify-center">
+               <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" class="w-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                  <path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+               </svg>
+            </button>
+            <button class="btn btn-primary-outline w-24 flex justify-center">
+               <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" class="w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
+                  <path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path>
+               </svg>
+            </button>
+            <button class="btn btn-primary-outline w-24 flex justify-center">
+               <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github-alt" class="w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512">
+                  <path fill="currentColor" d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"></path>
+               </svg>
+            </button>
+         </div>
+      </fieldset>
+   </form>
+</section>

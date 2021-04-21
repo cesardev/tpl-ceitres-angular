@@ -15,6 +15,7 @@
             "show": true
          },
          "pixelBase": 14,
+         "interfaceMode": "light",
          "theme": {
             "primary-color": "#00838f",
             "secondary-color": "#37474f",

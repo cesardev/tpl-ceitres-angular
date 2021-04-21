@@ -1,0 +1,13 @@
+.bg-mode {
+   background-color: $mode-background-color;
+
+   &-d1 { background-color: darken($mode-background-color, 3%) !important; }
+   &-d2 { background-color: darken($mode-background-color, 5%) !important; }
+   &-d3 { background-color: darken($mode-background-color, 10%) !important; }
+   &-d4 { background-color: darken($mode-background-color, 15%) !important; }
+   &-d5 { background-color: darken($mode-background-color, 20%) !important; }
+}
+
+.color-mode {
+   color: $mode-text-color;
+}

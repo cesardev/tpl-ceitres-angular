@@ -12,6 +12,7 @@ import { GlobalSettings } from '@common/global.settings';
 import { CommonServiceModule } from '@common/services/common-service.module';
 import en from '@angular/common/locales/en';
 import { AppRouting } from './app.routing';
+import { annotation, menu, HeroIconModule } from 'ng-heroicon';
 
 registerLocaleData( en );
 
@@ -31,7 +32,8 @@ registerLocaleData( en );
     BrowserAnimationsModule,
     NzButtonModule,
     CommonServiceModule,
-    AppRouting
+    AppRouting,
+    HeroIconModule.withIcons({ annotation, menu })
   ],
   providers: [
     GlobalSettings,

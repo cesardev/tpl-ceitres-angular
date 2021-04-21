@@ -6,7 +6,7 @@ import { BackendResponse } from '@common/models';
 @Component({
   selector: 'app-root',
   template: `
-    <section *ngIf="configLoaded">
+    <section class="application {{ global.preferences.interfaceMode }}" *ngIf="configLoaded">
       <ng-container>
         <router-outlet></router-outlet>
       </ng-container>

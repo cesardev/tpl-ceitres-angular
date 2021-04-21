@@ -1,0 +1,103 @@
+$bg-component-form: if( $mode-style == 'light', darken($mode-background-color, 5%), lighten($mode-background-color, 5%) );
+$bg-component-form-hover: if( $mode-style == 'light', darken($mode-background-color, 8%), lighten($mode-background-color, 10%) );
+
+/* INPUTS */
+.ant-form-item {
+   margin-bottom: 1.5rem;
+   font-size: 1rem;
+
+   &-control-input {
+      min-height: 2rem;
+
+      &-content {
+         & .ant-input-affix-wrapper {
+            border: none;
+            border-radius: 0.3rem;
+            font-size: $font-size-text;
+            padding: 0.5rem 0.7rem;
+            background-color: $bg-component-form;
+
+            &:hover {
+               background-color: $bg-component-form-hover;
+            }
+
+            &-focused {
+               box-shadow: 0 0 0 2px rgba($mode-text-color, 0.2);
+            }
+
+            & .ant-input-prefix,
+            & .ant-input {
+               color: $mode-text-color;
+            }
+
+            & .ant-input-prefix {
+               margin-right: 0.5rem;
+            }
+
+            & .ant-input {
+               font-size: 1.1rem;
+               background-color: transparent;
+            }
+         }
+      }
+   }
+
+   &-explain-error {
+      font-size: 1rem;
+      @if $mode-style == 'light' {
+         color: theme('colors.red.500');
+      } @else {
+         color: theme('colors.red.400');
+      }
+   }
+}
+
+/* CHECKBOX */
+.ant-checkbox-wrapper {
+   &:not(.ant-checkbox-wrapper-checked):hover {
+      & .ant-checkbox-inner {
+         background-color: $bg-component-form-hover;
+      }
+   }
+
+   & .ant-checkbox {
+      &.ant-checkbox-checked {
+         &::after {
+            border: none;
+            border-radius: 0.2rem;
+            opacity: 0.1;
+            background-color: var(--primary-color-500);
+         }
+      }
+
+      &-input {
+         &:hover,
+         &:focus-visible {
+            border: none;
+            outline: none !important;
+         }
+
+         &:hover {
+            background-color: darken($bg-component-form-hover, 8%);
+         }
+      }
+
+      &-inner {
+         width: 1.1rem;
+         height: 1.1rem;
+         border: none;
+         border-radius: 0.2rem;
+         background-color: $bg-component-form;
+
+         &::after {
+            border-color: var(--primary-color-10);
+         }
+      }
+   }
+
+   &-checked {
+      & .ant-checkbox-inner {
+         background-color: var(--primary-color-500);
+      }
+   }
+}
